@@ -1,4 +1,4 @@
-![[Pasted image 20210623205427.png]]
+![[20210623205427.png]]
 
 Hoy solo hablaremos de python
 - edd

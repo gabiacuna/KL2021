@@ -83,7 +83,7 @@ FALSE  TRUE  TRUE  TRUE  TRUE  TRUE
 6   587   479   158    38    62   678    41 13500  3335   500   675    67    73   9.4    11  9727    55
 > chart.Correlation(basenum,histogram = TRUE, pch = 19)
 ```
-![[chartCorr1.png]]
+![](fotos/chartCorr1.png)
 
 Por cada variable genera su distribucion que queda en la diagonal. Debajo de ella grafica la dispercion de dos variables.
 
@@ -94,7 +94,7 @@ bar <- table(base$Tipo)
 par(mfrow = c(1,1))
 barplot(bar, xlab = "Asignación de recursos")
 ```
-![[graphVarRes.png]]
+![](fotos/graphVarRes.png)
 
 Intercepto es signiificativo cuando es <0.05
 
@@ -539,7 +539,7 @@ Modelo 3 es el mejor modelo. Los otros los podemos dejar pero no son necesarios,
 
 ```
 Lo podemos ver así:
-![[corrMod3.png]]
+![](fotos/corrMod3.png)
 
 ya que las vars 3 y 6 se relacionan normalmente dejariamos solo una en el modelo, segun cual es mas importante considerar.  -> Buscamos que no haya una relacion entre las variables.
 
@@ -597,7 +597,7 @@ library("pROC")
 test_prob <- predict(modelo3, newdata = testbase, type = "response")
 test_roc <- roc(testbase$Tipo ~ test_prob, plot = TRUE, print.auc = TRUE)
 ```
-![[aucMod3.png]]
+![](fotos/aucMod3.png)
 
 Para practicar, haremos un ejercicio
 
@@ -642,7 +642,7 @@ The following object is masked from ‘package:dplyr’:
 
 Algo así me habria corrido el ggpubr:
 
-![[Pasted image 20210622212817.png]]
+![](fotos/20210622212817.png)
 
 Aca orientarnos respecto a con que informacion cuento, esto es para la orientacion de los datos
 
@@ -704,7 +704,7 @@ en este caso, clasifico 3 mal.
 > plot(iris.proy,type="n")
 > text(iris.proy,labels=datos$clase, col = as.numeric(datos$clase))
 ```
-![[irisPlot.png]]
+![](fotos/irisPlot.png)
 Muestra como es la clasificacion utilizando mi modelo.
 
 Mañana correremos la regrecion lazo y raids
