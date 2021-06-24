@@ -9,9 +9,9 @@ Penaliza la suma de cada uno de los $\beta$.
 Quedemos buscar un $\lambda$ optimo.
 -> nlambda es la cantidad de valores lambda con los que se ensayara. Se recomienda que sea >= 100. Para modelos no lineales se recomienda >1000
 
-![[Pasted image 20210623192641.png]]
+![](fotos/20210623192641.png)
 
-![[Pasted image 20210623192955.png]]
+![](fotos/20210623192955.png)
 
 ```r
 # Cambio de nombre
@@ -68,7 +68,7 @@ regularizacion %>%
   theme(legend.position = "none")
 
 ```
-![[coefEnFxdeRegula.png]]
+![](fotos/coefEnFxdeRegula.png)
 
 2 convergen rapido a 0, por lo que no es necesario tenerlas en cuenta.
 
@@ -86,7 +86,7 @@ regularizacion %>%
 [1] "Lambda encontrado: 0.0522872535449215"
  ```
  
- ![[evolucionLambda.png]]
+ ![](fotos/evolucionLambda.png)
  
  ```r
  > paste("Lambda óptimo + 1 desviaci?n estándar:", cv_error$lambda.1se)
@@ -140,7 +140,7 @@ df_coeficientes %>%
 ylim(0,1) geom_text(aes(label = round(coeficiente,2)), vjust = -0.75)
  ```
  
- ![[coefModLasso.png]]
+ ![](fotos/coefModLasso.png)
  
  Ahora hacemos los entrenamientos de predicciones
  ```r
@@ -165,7 +165,7 @@ predicciones_test
 [1] "Error (mse) de test: 35.0347198588562"	#Esto es el error cuadratico medio generado y en teoria es emjor que utilizar el modelo completo
  ```
  
- ![[Pasted image 20210623201313.png]]
+ ![](fotos/20210623201313.png)
  
  ```r
  > #######################################################################
@@ -214,7 +214,7 @@ predicciones_test
 +   theme(legend.position = "none")
  ```
  
- ![[coefModEnfuncReg2.png]]
+ ![](fotos/coefModEnfuncReg2.png)
  
  Ahora la penalizacion empieza antes?
  
@@ -244,9 +244,9 @@ predicciones_test
 [1] "Mejor valor de lambda encontrado + 1 desviaci?n est?ndar: 2.4269593288832" 
  ```
  
- ![[EvErrores2.png]]
+ ![](fotos/EvErrores2.png)
  
- ![[Pasted image 20210623202415.png]]
+ ![](fotos/20210623202415.png)
  
  Para los coeficientes del modelo se hace igual que antes 
  
@@ -268,5 +268,5 @@ predicciones_test
  
 El error enorme es por la particion aleatoria. 
 
-![[Pasted image 20210623204019.png]]
+![](fotos/20210623204019.png)
 
