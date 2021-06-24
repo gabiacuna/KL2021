@@ -48,7 +48,7 @@ tibble [38 × 3] (S3: tbl_df/tbl/data.frame)
 pairs(base)
 ```
 
-![](Rplot.png)
+![](fotos/Rplot.png)
 ```r
 > regresion<-lm(Grasas~Edad, data = base)
 > summary(regresion)
@@ -117,10 +117,10 @@ Plot de los datos:
 plot(base$Edad, base$Grasas, xlab='Edad', ylab='Grasas')
 ```
 
-![[resPlot.png]]
+[](fotos/resPlot.png)
 
 Luego cono el abline(regresion) se agrega la linea de tendencia:
-![[plotCLineaTend.png]]
+[](fotos/plotCLineaTend.png)
 
 Buscamos tratar a los outliers, para ello se intrasla el paquete `ggplot`
 
@@ -138,7 +138,7 @@ ggplot(data = base, aes(x = predict(regresion),
        y = "Residuos estudentizados")+
   theme_bw() + theme(plot.title = element_text(hjust = 0.5))
 ```
-![](ggplot1.png)
+![](fotos/ggplot1.png)
 
 Con este se ven los outliers
 
@@ -221,7 +221,7 @@ Edad 0.683 1.000
 > corrplot(round(cor(subset(base)), digits = 3), type = "lower")
 ```
 El corrplot es para verlo de forma visual!.
-![](corrplot1.png) 
+![](fotos/corrplot1.png) 
 
 El 1 es la relacion perfecta, el 0.683 significa la relacion entre la var peso y edad. A medida que me hacerco a los 1, hay una mayor relacion entre ellas. Se buscan valores lo mas cercanos al cero posible, para que sean independientes.
 -> entre mas oscuro el color mayor relacion! (en el graph)
@@ -280,13 +280,15 @@ Edad           1.686699   4.316790	#ambas vars son signidicaticas :)
 > plot(regresion2)	#Muestra 4 gráficas!
 ```
 
-![](plotRegresion2.png)
+![](fotos/plotRegresion2.png)
 
 La linea roja indica que tanto se ajusta la linealidad del modelo, lo ideal es que no se aleje mucho del 0 ya que estamos viendo los residuales
 
-![[plotRegresion22.png]]
-![[plotRegresion23.png]] 
-![[plotRegresion24.png]]
+[](fotos/plotRegresion22.png)
+
+[](fotos/plotRegresion23.png) 
+
+[](fotos/plotRegresion24.png)
 
 >investigar que son especificamente los residuales !!!!
 
